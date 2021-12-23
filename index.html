@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>A Short Quiz About Planet Earth</title>
 </head>
 
 
@@ -19,76 +24,15 @@
 </div>
 
 <div id="highscore-screen" style="display: none;">
-    <h2>Thank you for completing the quiz</h2>
+    <h2>Thank you for completing the Quiz!</h2>
     <p id="score"> Your score is </p>
 </div>
     
 </body>
 
 
-<script>
 
-    // define the questions and answers
-    var questions = [
-        {
-            questionText: ' how big is the earth',
-            answers: ['24km', '6371km', 'small', '10000km'],
-            correctAnswerIndex: 1,
-        },
-        {
-            questionText: ' how shape is the earth',
-            answers: ['sphere', 'circle', 'square', '10000km'],
-            correctAnswerIndex: 0
-        }
-
-    ]
-
-    // create variables to track the elements we're going to update
-    var questionElement = document.getElementById('question');
-    var answerOne = document.getElementById('answer-one');
-    var answerTwo = document.getElementById('answer-two');
-    var answerThree = document.getElementById('answer-three');
-    var answerFour = document.getElementById('answer-four');
-
-    // initialize the question index and user score 
-    var questionIndex = -1;
-    var usersScore = 0
+<script src="main.js"></script>
 
 
-    // call this when the user clicks a button
-    function handleAnswer(answerIndex) {
-        if (answerIndex === questions[questionIndex].correctAnswerIndex) {
-            usersScore += 1;
-        }
-
-        nextQuestion()
-    }
-
-    
-    function nextQuestion() {
-        questionIndex+=1
-        
-        // if the user is at the end of the quiz
-        if (questionIndex === questions.length) {
-            // the quiz is over, hide the quiz and display the high score div
-            questionIndex = 0;
-            document.getElementById('highscore-screen').style.display = "block"
-            document.getElementById('questions-screen').style.display = "none"
-            document.getElementById('score').innerText = `Your score is ${usersScore} out of ${questions.length}` 
-        } else {
-            // update the quiz and answer text in the HTML
-            questionElement.innerText=questions[questionIndex].questionText
-            answerOne.innerText=questions[questionIndex].answers[0]
-            answerTwo.innerText=questions[questionIndex].answers[1]
-            answerThree.innerText=questions[questionIndex].answers[2]
-            answerFour.innerText=questions[questionIndex].answers[3]
-        }
-
-       
-    }
-    
-    nextQuestion();
-
-    
-    </script>
 </html>
