@@ -1,34 +1,29 @@
-
 // define the questions and answers
 var questions = [
     {
-        questionText: ['how big is the earth'],
-        answers: ['24km', '6371km', 'small', '10000km'],
+        questionText: ' How big is Planet Earth?',
+        answers: ['24km', '6371km', 'Small', '10000km'],
         correctAnswerIndex: 1,
     },
-
     {
-        questionText: [' how shape is the earth'],
-        answers: ['sphere', 'circle', 'square', '10000km'],
-        correctAnswerIndex: 0
-    }
-
+        questionText: ' What shape is Planet Earth?',
+        answers: ['Sphere', 'Circle', 'Square', '10000km'],
+        correctAnswerIndex: 0,
+    },
     {
-        questionText: [' how shape is the earth'],
-        answers: ['sphere', 'circle', 'square', '10000km'],
-        correctAnswerIndex: 0
-    }
-
+        questionText: ' What percentage of Earth is made up of water?',
+        answers: ['0%', '92%', '71%', '38%'],
+        correctAnswerIndex: 2,
+    },
     {
-        questionText: [' how shape is the earth'],
-        answers: ['sphere', 'circle', 'square', '10000km'],
-        correctAnswerIndex: 0
-    }
+        questionText: ' How many planets from the sun is Planet Earth?',
+        answers: ['Four', 'Three', 'Seven', 'Nine'],
+        correctAnswerIndex: 1,
+    },
 
 ]
 
 // create variables to track the elements we're going to update
-
 var questionElement = document.getElementById('question');
 var answerOne = document.getElementById('answer-one');
 var answerTwo = document.getElementById('answer-two');
