@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #fff;
+    letter-spacing: .3em;
+
+}
+
+#questions-screen {
+    background-color: #fff;
+    text-align: center;   
+}
+
+h1 {
+    padding: 20px 0 20px 0
+}
+
+#answer-one, #answer-two, #answer-three, #answer-four {
+    width: 250px;
+    height: 50px;
+    background-color: #A2E4F5;
+    border: solid;
+    border-width: 1px;
+    border-color: grey;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
